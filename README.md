@@ -38,7 +38,7 @@ Runs on anything from a CPU-only laptop to large GPU servers.
 - Secure remote access: Cloudflare Tunnel
 - Benchmarked on consumer hardware
 
-#### [DraftCraft](https://wordpress.org/plugins/draftcraft) · open source · [source](https://github.com/ArtisansWP/DraftCraft)
+#### [DraftCraft](https://wordpress.org/plugins/draftcraft) · open source
 WordPress plugin that generates scheduled blog drafts in a site's brand voice.
 
 - Bring-your-own-key through OpenRouter
