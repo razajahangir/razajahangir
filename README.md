@@ -45,20 +45,43 @@ WordPress plugin that generates scheduled blog drafts in a site's brand voice.
 - SEO sync with Rank Math, Yoast, and AIOSEO
 
 #### Atlas Planner · client work
-AI goal planning for a membership community.
+AI goal-planning platform for a coaching membership community (WordPress + BuddyBoss). Members take a life & business assessment, get AI-recommended focus areas and goals, and turn them into scheduled actions. MVP built in 8 weeks, then developed in weekly releases for seven more months.
 
-- RAG over the client's coaching content
-- JSON-schema structured outputs
-- Server-side AI calls with cost controls
+**AI layer**
+- OpenAI ranks focus areas from assessment scores and proposes SMART goals and actions, retrieved from the client's goal and action library
+- Weekly check-in analysis that generates short nudges and reschedule suggestions
+- Every response follows a JSON schema, is validated in PHP before saving, and is retried if invalid; tool calling for goal selection
+- All calls go through a server-side proxy; prompts and schemas are versioned in the repo with unit tests
+- Cost controls: per-call token budgets, input truncation, retries with backoff on 429/500
+- Telemetry per call (model, tokens, latency, estimated cost) in an admin view
+- AI kill switch that falls back to rules-based suggestions; PII stripped before sending, plus a "delete my AI data" option
+
+**Platform**
+- Recurring actions with RRULE, timezone and DST safe; due date and recurrence rule enforced as mutually exclusive at the API and database layers
+- Background jobs with Action Scheduler: hourly reminders, daily digests, weekly check-ins
+- REST API, custom database tables, Elementor widgets
+- Integrations: BuddyBoss notifications, ActiveCampaign email/SMS and CRM sync, GamiPress points and streaks
+- Exports to PDF, iCal, and CSV
 
 #### Custom GPT Manager · client work
-Create and run multiple AI chat agents from the WordPress admin.
+WordPress plugin for building and deploying multiple custom GPTs from wp-admin, each with its own knowledge base, access rules, and ChatGPT-style chat UI. Built end to end, then extended over six months.
 
-- Per-agent prompt, model, and output format
-- Any model through OpenRouter
-- Conversation and token logging, per-user rate limits
+**AI layer**
+- Per-GPT configuration: system prompt, model, temperature, token limit, and output format (text or JSON)
+- Provider abstraction layer; any major model through OpenRouter
+- Knowledge bases per GPT: file ingestion (PDF, DOCX, CSV, TXT) and URL/sitemap crawling, processed in background jobs
+- Retrieval-grounded answers with citations; a content coach agent that parses the site's Elementor pages and links back to its sources
+- Streaming responses through a server-side proxy; API keys never reach the browser
+- Moderation filters before and after each response: blocklists, regex rules, jailbreak protection
 
-<sub>Client code is private. Reviews for both client projects are on [Upwork](https://www.upwork.com/freelancers/developerraza).</sub>
+**Platform**
+- Access by role or membership level; rate limits and quotas per user, role, and GPT, with cool-downs
+- Analytics per GPT and per user: conversations, tokens, spend, response time, errors, with CSV export
+- Email and Slack alerts for error spikes and quota thresholds
+- Data retention windows and deletion of a user's conversations
+- Config import/export; multiple GPTs per page with isolated state, embedded via shortcode
+
+<sub>Client code is private. Both projects were delivered across four contracts, all rated 5★ on [Upwork](https://www.upwork.com/freelancers/developerraza).</sub>
 
 ---
 
