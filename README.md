@@ -19,8 +19,8 @@ Before AI, I spent 13+ years as a backend engineer building PHP applications, Wo
 
 ### Stack
 
-**AI / Python:** `Python` `LangGraph` `LangChain` `LlamaIndex` `LangSmith` `FastAPI` `LiteLLM` `Ollama`
-**Data:** `PostgreSQL + pgvector` `Supabase` `MySQL`
+**AI / Python:** `Python` `LangGraph` `LangChain` `LlamaIndex` `LangSmith` `FastAPI` `LiteLLM` `Ollama`<br>
+**Data:** `PostgreSQL + pgvector` `Supabase` `MySQL`<br>
 **Web & infra:** `Node.js` `Next.js` `PHP` `WordPress` `Docker` `Cloudflare Tunnel`
 
 ---
@@ -31,12 +31,11 @@ Before AI, I spent 13+ years as a backend engineer building PHP applications, Wo
 A self-hosted, private AI stack for teams that want to run AI on their own hardware without sending data to third parties.
 Runs on anything from a CPU-only laptop to large GPU servers.
 
-- Chat UI: Open WebUI
-- Model gateway: LiteLLM
-- Local models: Ollama
-- Document search: PostgreSQL + pgvector
-- Secure remote access: Cloudflare Tunnel
-- Benchmarked on consumer hardware
+- One Docker Compose file: Open WebUI, LiteLLM gateway, Ollama, PostgreSQL + pgvector, Cloudflare Tunnel
+- Document Q&A with citations; each user's knowledge bases are isolated
+- No inbound ports open; identity check before the login page
+- Python benchmark tool measuring time to first token and tokens/s on your own hardware
+- Upgrade path to vLLM on bigger GPUs by changing only the gateway config
 
 #### [DraftCraft](https://wordpress.org/plugins/draftcraft) · open source
 WordPress plugin that generates scheduled blog drafts in a site's brand voice.
