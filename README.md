@@ -44,7 +44,7 @@ WordPress plugin that generates scheduled blog drafts in a site's brand voice.
 - Review queue: nothing publishes without approval
 - SEO sync with Rank Math, Yoast, and AIOSEO
 
-#### Atlas Planner · client work
+#### [Atlas Planner](https://www.upwork.com/freelancers/developerraza?p=2113898981690503168) · client work
 AI goal-planning platform for a coaching membership community (WordPress + BuddyBoss). Members take a life & business assessment, get AI-recommended focus areas and goals, and turn them into scheduled actions. MVP built in 8 weeks, then developed in weekly releases for seven more months.
 
 **AI layer**
@@ -63,7 +63,7 @@ AI goal-planning platform for a coaching membership community (WordPress + Buddy
 - Integrations: BuddyBoss notifications, ActiveCampaign email/SMS and CRM sync, GamiPress points and streaks
 - Exports to PDF, iCal, and CSV
 
-#### Custom GPT Manager · client work
+#### [Custom GPT Manager](https://www.upwork.com/freelancers/developerraza?p=2113899795565277184) · client work
 WordPress plugin for building and deploying multiple custom GPTs from wp-admin, each with its own knowledge base, access rules, and ChatGPT-style chat UI. Built end to end, then extended over six months.
 
 **AI layer**
