@@ -6,7 +6,7 @@
 
 I work across the full lifecycle. That means designing the agent or retrieval pipeline, testing it against real data before release, running it as a reliable service, and tracking quality, cost, and latency once it's live.
 
-Before AI, I spent 10+ years as a backend engineer building PHP applications, WordPress plugins, CodeIgniter apps, APIs, and databases, plus web scraping in Python. That background shapes how I build AI systems: clean data pipelines, stable integrations, and code that is easy to maintain after launch.
+Before AI, I spent 13+ years as a backend engineer building PHP applications, WordPress plugins, CodeIgniter apps, APIs, and databases, plus web scraping in Python. That background shapes how I build AI systems: clean data pipelines, stable integrations, and code that is easy to maintain after launch.
 
 ---
 
